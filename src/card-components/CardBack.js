@@ -15,7 +15,7 @@ export default class CardBack extends Component {
       return <img src={imgMapper[this.props.IMDBRating]} alt="" />;
     } else {
     return <h4>No Rating Found</h4>;
-    } 
+    }
   };
 
   render() {
@@ -25,7 +25,7 @@ export default class CardBack extends Component {
         <span/>
           {this.generateRatingElement()}
         <span />
-        <h5 className="genres">{ this.props.genres }</h5>
+        <h5 className="genres">{ this.props.genres.join(', ') }</h5>
       </div>
     )
   }
